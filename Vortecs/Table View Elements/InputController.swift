@@ -17,7 +17,8 @@ class InputController: UITableViewController {
         super.viewDidLoad()
 		self.tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: self.tableView.rowHeight / 10, right: 0)
 		self.tableView.separatorStyle = .singleLine
-    }
+		self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.endEditing)))
+	}
 
     // MARK: - Table view data source
 
@@ -117,7 +118,7 @@ class InputController: UITableViewController {
 	}
 	
 	// Ends the text editing
-	func endEditing() {
+	@objc func endEditing() {
 		for cell in self.tableView.visibleCells where cell is VectorCell {
 			let newCell = cell as! VectorCell
 			newCell.angleField.endEditing(true)

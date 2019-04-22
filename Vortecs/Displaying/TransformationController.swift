@@ -19,6 +19,14 @@ class TransformationController: UIViewController , UITextFieldDelegate{
 	override func viewDidLoad() {
 		self.view.backgroundColor = UIColor.clear
 		self.view.isOpaque = false
+		self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.stopText)))
+	}
+	
+	@objc func stopText() {
+		self.x0.endEditing(true)
+		self.x1.endEditing(true)
+		self.y1.endEditing(true)
+		self.y2.endEditing(true)
 	}
 	
 	@IBAction func applyTransform(_ sender: Any) {
