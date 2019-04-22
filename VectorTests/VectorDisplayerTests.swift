@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import VectorDisplayer
+@testable import Vector
 
 class VectorDisplayerTests: XCTestCase {
 	
@@ -20,21 +20,21 @@ class VectorDisplayerTests: XCTestCase {
     }
 	
 	func testToRadians(){
-		assert(45.0.toRadians() == .pi / 4)
-		assert(90.0.toRadians() == .pi / 2)
-		assert(135.0.toRadians() == 3 * .pi / 4)
+		XCTAssertTrue(45.0.toRadians() == .pi / 4)
+		XCTAssertTrue(90.0.toRadians() == .pi / 2)
+		XCTAssertTrue(135.0.toRadians() == 3 * .pi / 4)
 	}
 	
 	func testVector() {
-		let vector1: CartesianVector = CartesianVector(x: Decimal(9), y: 12)
-		assert(vector1.length == 15)
-		let vector2 = CartesianVector(x: Decimal(1), y: 1)
-		assert(vector2.angle == Decimal(.pi / 4))
+		let vector1: CartesianVector = CartesianVector(x: 9, y: 12)
+		XCTAssertTrue(vector1.length == 15)
+		let vector2 = CartesianVector(x: 1, y: 1)
+		XCTAssertTrue(vector2.angle == Decimal(.pi / 4))
 	}
 	
 	func testToDegrees() {
-		assert((.pi / 2).toDegrees() == 90)
-		assert((.pi / 4).toDegrees() == 45)
+		XCTAssertTrue((.pi / 2).toDegrees() == 90)
+		XCTAssertTrue((.pi / 4).toDegrees() == 45)
 	}
     func testPerformanceExample() {
     }

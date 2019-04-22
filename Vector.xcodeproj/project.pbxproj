@@ -14,6 +14,7 @@
 		A018D697226B8B00002E6A80 /* MoveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A018D696226B8B00002E6A80 /* MoveVC.swift */; };
 		A0407A94226D1C70008ECC0C /* CoordinateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0407A93226D1C70008ECC0C /* CoordinateDelegate.swift */; };
 		A0407A96226D1E30008ECC0C /* HoldingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0407A95226D1E30008ECC0C /* HoldingView.swift */; };
+		A0407A98226D3F97008ECC0C /* VectorDisplayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F14BB02224E821009DC4D2 /* VectorDisplayerTests.swift */; };
 		A061C2DF2258034F0035C769 /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A061C2DE2258034F0035C769 /* InputController.swift */; };
 		A061C2E2225804580035C769 /* VectorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A061C2E1225804580035C769 /* VectorSource.swift */; };
 		A061C2E5225806280035C769 /* VectorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A061C2E4225806280035C769 /* VectorInteractor.swift */; };
@@ -27,7 +28,6 @@
 		A0F14BA12224E81E009DC4D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F14B9F2224E81E009DC4D2 /* Main.storyboard */; };
 		A0F14BA32224E820009DC4D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0F14BA22224E820009DC4D2 /* Assets.xcassets */; };
 		A0F14BA62224E820009DC4D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F14BA42224E820009DC4D2 /* LaunchScreen.storyboard */; };
-		A0F14BB12224E821009DC4D2 /* VectorDisplayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F14BB02224E821009DC4D2 /* VectorDisplayerTests.swift */; };
 		A0F14BBE2224EA73009DC4D2 /* CGVectorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F14BBD2224EA73009DC4D2 /* CGVectorExtension.swift */; };
 		A0F14BC52224F154009DC4D2 /* CartesianVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F14BC42224F154009DC4D2 /* CartesianVector.swift */; };
 		A0F14BC92224FB82009DC4D2 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F14BC82224FB82009DC4D2 /* Vector.swift */; };
@@ -324,7 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0F14BB12224E821009DC4D2 /* VectorDisplayerTests.swift in Sources */,
+				A0407A98226D3F97008ECC0C /* VectorDisplayerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,7 +517,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SCB9RTL9PP;
-				INFOPLIST_FILE = VectorDisplayerTests/Info.plist;
+				INFOPLIST_FILE = VectorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -538,7 +538,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SCB9RTL9PP;
-				INFOPLIST_FILE = VectorDisplayerTests/Info.plist;
+				INFOPLIST_FILE = VectorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
