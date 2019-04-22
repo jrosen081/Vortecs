@@ -1,6 +1,6 @@
 # Vortecs
 
-Vector is a free, offline, and simple education tool for displaying 2D vectors and visualizing 2D linear transformations. It is designed to be used primarily by students who are being introduced to Linear Algebra concepts for the first time.
+Vortecs is a free, offline, and simple education tool for displaying 2D vectors and visualizing 2D linear transformations. It is designed to be used primarily by students who are being introduced to Linear Algebra concepts for the first time.
 
 # Features!
   - [x] Make and display 2D vectors on a coordinate plane
@@ -23,7 +23,7 @@ A desktop version of this app is in development using Java, and its progress can
 - **Dennis Kats**: *Co-Designer and Math Consultant*
 
 # License
-Vector is licensed under the MIT License - see the [LICENSE](https://raw.githubusercontent.com/jrosen081/Vector/master/LICENSE) file for details
+Vortecs is licensed under the MIT License - see the [LICENSE](https://raw.githubusercontent.com/jrosen081/Vector/master/LICENSE) file for details
 
 # Acknowledgements
 - 3Blue1Brown for his amazing [Linear Algebra series](https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) that was the source of inspiration for this project.
