@@ -1,4 +1,4 @@
-# Vector
+# Vortecs
 
 Vector is a free, offline, and simple education tool for displaying 2D vectors and visualizing 2D linear transformations. It is designed to be used primarily by students who are being introduced to Linear Algebra concepts for the first time.
 

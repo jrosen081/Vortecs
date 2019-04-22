@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A0F14B972224E81E009DC4D2"
-               BuildableName = "Vector.app"
-               BlueprintName = "Vector"
-               ReferencedContainer = "container:Vector.xcodeproj">
+               BuildableName = "Vortecs.app"
+               BlueprintName = "Vortecs"
+               ReferencedContainer = "container:Vortecs.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A0F14BAB2224E821009DC4D2"
-               BuildableName = "VectorTests.xctest"
-               BlueprintName = "VectorTests"
-               ReferencedContainer = "container:Vector.xcodeproj">
+               BuildableName = "VortecsTests.xctest"
+               BlueprintName = "VortecsTests"
+               ReferencedContainer = "container:Vortecs.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A0F14B972224E81E009DC4D2"
-            BuildableName = "Vector.app"
-            BlueprintName = "Vector"
-            ReferencedContainer = "container:Vector.xcodeproj">
+            BuildableName = "Vortecs.app"
+            BlueprintName = "Vortecs"
+            ReferencedContainer = "container:Vortecs.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -67,9 +67,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A0F14B972224E81E009DC4D2"
-            BuildableName = "Vector.app"
-            BlueprintName = "Vector"
-            ReferencedContainer = "container:Vector.xcodeproj">
+            BuildableName = "Vortecs.app"
+            BlueprintName = "Vortecs"
+            ReferencedContainer = "container:Vortecs.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -86,9 +86,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A0F14B972224E81E009DC4D2"
-            BuildableName = "Vector.app"
-            BlueprintName = "Vector"
-            ReferencedContainer = "container:Vector.xcodeproj">
+            BuildableName = "Vortecs.app"
+            BlueprintName = "Vortecs"
+            ReferencedContainer = "container:Vortecs.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

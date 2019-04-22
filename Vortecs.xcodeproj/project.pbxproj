@@ -60,14 +60,14 @@
 		A061C2EB22584E920035C769 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		A061C2ED22584EA60035C769 /* Drawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
 		A067C7332267B6E0008BEA8D /* PreviousState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousState.swift; sourceTree = "<group>"; };
-		A0F14B982224E81E009DC4D2 /* Vector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0F14B982224E81E009DC4D2 /* Vortecs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vortecs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F14B9B2224E81E009DC4D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0F14B9D2224E81E009DC4D2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A0F14BA02224E81E009DC4D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0F14BA22224E820009DC4D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0F14BA52224E820009DC4D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0F14BA72224E820009DC4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A0F14BAC2224E821009DC4D2 /* VectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0F14BAC2224E821009DC4D2 /* VortecsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VortecsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F14BB02224E821009DC4D2 /* VectorDisplayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorDisplayerTests.swift; sourceTree = "<group>"; };
 		A0F14BB22224E821009DC4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0F14BBD2224EA73009DC4D2 /* CGVectorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGVectorExtension.swift; sourceTree = "<group>"; };
@@ -141,8 +141,8 @@
 		A0F14B8F2224E81E009DC4D2 = {
 			isa = PBXGroup;
 			children = (
-				A0F14B9A2224E81E009DC4D2 /* Vector */,
-				A0F14BAF2224E821009DC4D2 /* VectorTests */,
+				A0F14B9A2224E81E009DC4D2 /* Vortecs */,
+				A0F14BAF2224E821009DC4D2 /* VortecsTests */,
 				A0F14B992224E81E009DC4D2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -150,13 +150,13 @@
 		A0F14B992224E81E009DC4D2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A0F14B982224E81E009DC4D2 /* Vector.app */,
-				A0F14BAC2224E821009DC4D2 /* VectorTests.xctest */,
+				A0F14B982224E81E009DC4D2 /* Vortecs.app */,
+				A0F14BAC2224E821009DC4D2 /* VortecsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A0F14B9A2224E81E009DC4D2 /* Vector */ = {
+		A0F14B9A2224E81E009DC4D2 /* Vortecs */ = {
 			isa = PBXGroup;
 			children = (
 				A026BEDE225D018100DB32A9 /* Displaying */,
@@ -170,16 +170,16 @@
 				A0F14BA22224E820009DC4D2 /* Assets.xcassets */,
 				A0F14BA42224E820009DC4D2 /* LaunchScreen.storyboard */,
 			);
-			path = Vector;
+			path = Vortecs;
 			sourceTree = "<group>";
 		};
-		A0F14BAF2224E821009DC4D2 /* VectorTests */ = {
+		A0F14BAF2224E821009DC4D2 /* VortecsTests */ = {
 			isa = PBXGroup;
 			children = (
 				A0F14BB02224E821009DC4D2 /* VectorDisplayerTests.swift */,
 				A0F14BB22224E821009DC4D2 /* Info.plist */,
 			);
-			path = VectorTests;
+			path = VortecsTests;
 			sourceTree = "<group>";
 		};
 		A0F14BC32224F146009DC4D2 /* Vectors */ = {
@@ -196,9 +196,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A0F14B972224E81E009DC4D2 /* Vector */ = {
+		A0F14B972224E81E009DC4D2 /* Vortecs */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A0F14BB52224E821009DC4D2 /* Build configuration list for PBXNativeTarget "Vector" */;
+			buildConfigurationList = A0F14BB52224E821009DC4D2 /* Build configuration list for PBXNativeTarget "Vortecs" */;
 			buildPhases = (
 				A0F14B942224E81E009DC4D2 /* Sources */,
 				A0F14B952224E81E009DC4D2 /* Frameworks */,
@@ -208,14 +208,14 @@
 			);
 			dependencies = (
 			);
-			name = Vector;
+			name = Vortecs;
 			productName = VectorDisplayer;
-			productReference = A0F14B982224E81E009DC4D2 /* Vector.app */;
+			productReference = A0F14B982224E81E009DC4D2 /* Vortecs.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A0F14BAB2224E821009DC4D2 /* VectorTests */ = {
+		A0F14BAB2224E821009DC4D2 /* VortecsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A0F14BB82224E821009DC4D2 /* Build configuration list for PBXNativeTarget "VectorTests" */;
+			buildConfigurationList = A0F14BB82224E821009DC4D2 /* Build configuration list for PBXNativeTarget "VortecsTests" */;
 			buildPhases = (
 				A0F14BA82224E821009DC4D2 /* Sources */,
 				A0F14BA92224E821009DC4D2 /* Frameworks */,
@@ -226,9 +226,9 @@
 			dependencies = (
 				A0F14BAE2224E821009DC4D2 /* PBXTargetDependency */,
 			);
-			name = VectorTests;
+			name = VortecsTests;
 			productName = VectorDisplayerTests;
-			productReference = A0F14BAC2224E821009DC4D2 /* VectorTests.xctest */;
+			productReference = A0F14BAC2224E821009DC4D2 /* VortecsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -252,7 +252,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A0F14B932224E81E009DC4D2 /* Build configuration list for PBXProject "Vector" */;
+			buildConfigurationList = A0F14B932224E81E009DC4D2 /* Build configuration list for PBXProject "Vortecs" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -265,8 +265,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A0F14B972224E81E009DC4D2 /* Vector */,
-				A0F14BAB2224E821009DC4D2 /* VectorTests */,
+				A0F14B972224E81E009DC4D2 /* Vortecs */,
+				A0F14BAB2224E821009DC4D2 /* VortecsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -333,7 +333,7 @@
 /* Begin PBXTargetDependency section */
 		A0F14BAE2224E821009DC4D2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A0F14B972224E81E009DC4D2 /* Vector */;
+			target = A0F14B972224E81E009DC4D2 /* Vortecs */;
 			targetProxy = A0F14BAD2224E821009DC4D2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -481,7 +481,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SCB9RTL9PP;
-				INFOPLIST_FILE = "$(SRCROOT)/Vector/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Vortecs/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,7 +500,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SCB9RTL9PP;
-				INFOPLIST_FILE = "$(SRCROOT)/Vector/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Vortecs/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -519,7 +519,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SCB9RTL9PP;
-				INFOPLIST_FILE = VectorTests/Info.plist;
+				INFOPLIST_FILE = VortecsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,7 +529,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vector.app/Vector";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vortecs.app/Vortecs";
 			};
 			name = Debug;
 		};
@@ -540,7 +540,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SCB9RTL9PP;
-				INFOPLIST_FILE = VectorTests/Info.plist;
+				INFOPLIST_FILE = VortecsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -550,14 +550,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vector.app/Vector";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vortecs.app/Vortecs";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A0F14B932224E81E009DC4D2 /* Build configuration list for PBXProject "Vector" */ = {
+		A0F14B932224E81E009DC4D2 /* Build configuration list for PBXProject "Vortecs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0F14BB32224E821009DC4D2 /* Debug */,
@@ -566,7 +566,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A0F14BB52224E821009DC4D2 /* Build configuration list for PBXNativeTarget "Vector" */ = {
+		A0F14BB52224E821009DC4D2 /* Build configuration list for PBXNativeTarget "Vortecs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0F14BB62224E821009DC4D2 /* Debug */,
@@ -575,7 +575,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A0F14BB82224E821009DC4D2 /* Build configuration list for PBXNativeTarget "VectorTests" */ = {
+		A0F14BB82224E821009DC4D2 /* Build configuration list for PBXNativeTarget "VortecsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0F14BB92224E821009DC4D2 /* Debug */,
