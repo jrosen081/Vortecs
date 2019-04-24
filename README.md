@@ -1,4 +1,4 @@
-# Vortecs
+# Vortecs ![image](https://user-images.githubusercontent.com/3473945/56632298-23175480-6627-11e9-8cb3-28e8b02294fd.png)
 
 Vortecs is a free, offline, and simple education tool for displaying 2D vectors and visualizing 2D linear transformations. It is designed to be used primarily by students who are being introduced to Linear Algebra concepts for the first time.
 
@@ -19,14 +19,14 @@ A desktop version of this app is in development using Java, and its progress can
 - iOS 10 or newer
 
 # Authors
-- **Jack Rosen**: *Lead Programmer and Co-Designer*
-- **Dennis Kats**: *Co-Designer and Math Consultant*
+- [**Jack Rosen**](https://github.com/jrosen081): *Lead Programmer and Co-Designer*
+- [**Dennis Kats**](https://github.com/denk0403): *Co-Designer and Math Consultant*
 
 # License
 Vortecs is licensed under the MIT License - see the [LICENSE](https://raw.githubusercontent.com/jrosen081/Vector/master/LICENSE) file for details
 
 # Acknowledgements
-- 3Blue1Brown for his amazing [Linear Algebra series](https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) that was the source of inspiration for this project.
+- 3Blue1Brown for his amazing [Essence of Linear Algebra series](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) that was the source of inspiration for this project.
 
 
 
