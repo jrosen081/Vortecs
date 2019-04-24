@@ -26,7 +26,7 @@ A desktop version of this app is in development using Java, and its progress can
 Vortecs is licensed under the MIT License - see the [LICENSE](https://raw.githubusercontent.com/jrosen081/Vector/master/LICENSE) file for details
 
 # Acknowledgements
-- 3Blue1Brown for his amazing [Essence of Linear Algebra series](https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) that was the source of inspiration for this project.
+- 3Blue1Brown for his amazing [Essence of Linear Algebra series](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) that was the source of inspiration for this project.
 
 
 
