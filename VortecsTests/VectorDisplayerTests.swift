@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Vector
+@testable import Vortecs
 
 class VectorDisplayerTests: XCTestCase {
 	
@@ -29,7 +29,7 @@ class VectorDisplayerTests: XCTestCase {
 		let vector1: CartesianVector = CartesianVector(x: 9, y: 12)
 		XCTAssertTrue(vector1.length == 15)
 		let vector2 = CartesianVector(x: 1, y: 1)
-		XCTAssertTrue(vector2.angle == Decimal(.pi / 4))
+		XCTAssertTrue(vector2.angle == Decimal(Double.pi / 4))
 	}
 	
 	func testToDegrees() {

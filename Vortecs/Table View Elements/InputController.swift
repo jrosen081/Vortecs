@@ -17,7 +17,8 @@ class InputController: UITableViewController {
         super.viewDidLoad()
 		self.tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: self.tableView.rowHeight / 10, right: 0)
 		self.tableView.separatorStyle = .singleLine
-    }
+		self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.endEditing)))
+	}
 
     // MARK: - Table view data source
 
@@ -117,7 +118,7 @@ class InputController: UITableViewController {
 	}
 	
 	// Ends the text editing
-	func endEditing() {
+	@objc func endEditing() {
 		for cell in self.tableView.visibleCells where cell is VectorCell {
 			let newCell = cell as! VectorCell
 			newCell.angleField.endEditing(true)
@@ -157,7 +158,7 @@ extension InputController: UITextFieldDelegate {
 	}
 	
 	func textFieldDidEndEditing(_ textField: UITextField) {
-		if let id = textField.restorationIdentifier, let num = Int(id), let type = textField.accessibilityIdentifier, let value = Double(textField.text!) {
+		if let id = textField.restorationIdentifier, let num = Int(id), let type = textField.accessibilityIdentifier, let value = CGFloat.convert(str: textField.text!) {
 			if type == "x" {
 				self.source?.updateVector(at: num, with: .x(val: Decimal(value)))
 			} else if type == "angle" {
@@ -211,5 +212,11 @@ extension CGAffineTransform {
 	
 	var invertY: CGAffineTransform {
 		return CGAffineTransform(a: self.a, b: -self.b, c: -self.c, d: self.d, tx: self.tx, ty: self.ty)
+	}
+}
+
+extension Decimal {
+	init(_ float: CGFloat) {
+		self.init(Double(float))
 	}
 }

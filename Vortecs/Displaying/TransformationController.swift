@@ -19,10 +19,18 @@ class TransformationController: UIViewController , UITextFieldDelegate{
 	override func viewDidLoad() {
 		self.view.backgroundColor = UIColor.clear
 		self.view.isOpaque = false
+		self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.stopText)))
+	}
+	
+	@objc func stopText() {
+		self.x0.endEditing(true)
+		self.x1.endEditing(true)
+		self.y1.endEditing(true)
+		self.y2.endEditing(true)
 	}
 	
 	@IBAction func applyTransform(_ sender: Any) {
-		let transform = CGAffineTransform(a: CGFloat(x0.text!), b: CGFloat(y1.text!), c: CGFloat(x1.text!), d: CGFloat(y2.text!), tx: 0, ty: 0)
+		let transform = CGAffineTransform(a: CGFloat.convert(str: x0.text!) ?? 0, b: CGFloat.convert(str: y1.text!) ?? 0, c: CGFloat.convert(str: x1.text!) ?? 0, d: CGFloat.convert(str: y2.text!) ?? 0, tx: 0, ty: 0)
 		self.dismiss(animated: true) {
 			self.delegate?.perform(transform: transform)
 		}
@@ -39,7 +47,12 @@ class TransformationController: UIViewController , UITextFieldDelegate{
 }
 
 extension CGFloat {
-	init(_ string: String) {
-		self.init(Double(string) ?? 0)
+	static func convert(str: String) -> CGFloat? {
+		if let val = Parser.parse(string: str) {
+			return CGFloat(val.doubleValue)
+		} else {
+			return nil
+		}
 	}
 }
+

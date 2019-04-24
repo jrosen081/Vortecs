@@ -97,6 +97,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "Vortecs"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

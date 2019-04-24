@@ -41,7 +41,7 @@ struct PolarVector: Vector {
 	* - returns: The vector that is opposite
 	*/
 	public func negate() -> Vector {
-		return PolarVector(angle: (angle + Decimal(.pi)), length: length, color: color, beginX: -self.beginX, beginY: -self.beginY)
+		return PolarVector(angle: (angle + Decimal(Double.pi)), length: length, color: color, beginX: -self.beginX, beginY: -self.beginY)
 	}
 	
 	// Updates and returns the new vector with the given update

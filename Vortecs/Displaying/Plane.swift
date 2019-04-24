@@ -29,17 +29,21 @@ class Plane: UIView, Drawable {
 		if self.layer.sublayers == nil || self.layer.sublayers?.count == 0 {
 			self.layer.addSublayer(bottomLayer)
 			self.layer.addSublayer(gridLayer)
-			self.layer.addSublayer(CALayer())
-			self.layer.addSublayer(CALayer())
+			let otherLayer = CAShapeLayer()
+			otherLayer.strokeColor = UIColor(red: 0 / 255, green: 9 / 255, blue: 183 / 255, alpha: 1).cgColor
+			otherLayer.lineWidth = bottomLayer.lineWidth
+			let otherLayer2 = CAShapeLayer()
+			otherLayer2.strokeColor = UIColor(red: 0 / 255, green: 9 / 255, blue: 183 / 255, alpha: 1).cgColor
+			otherLayer2.lineWidth = gridLayer.lineWidth
+			self.layer.addSublayer(otherLayer)
+			self.layer.addSublayer(otherLayer2)
 		} else {
-			self.layer.insertSublayer(bottomLayer, at: UInt32(0))
-			self.layer.insertSublayer(gridLayer, at: UInt32(1))
-			self.layer.sublayers?[2].removeFromSuperlayer()
-			self.layer.sublayers?[2].removeFromSuperlayer()
-			self.layer.insertSublayer(CALayer(), at: UInt32(2))
-			self.layer.insertSublayer(CALayer(), at: UInt32(3))
-			self.layer.sublayers?[4].removeFromSuperlayer()
-			self.layer.sublayers?[4].removeFromSuperlayer()
+			if let bottomL = self.layer.sublayers?[0] as? CAShapeLayer, let gridL = self.layer.sublayers?[1] as? CAShapeLayer, let release1 = self.layer.sublayers?[2] as? CAShapeLayer, let release2 = self.layer.sublayers?[3] as? CAShapeLayer{
+				bottomL.path = bottomPath.cgPath
+				gridL.path = gridPath.cgPath
+				release1.path = nil
+				release2.path = nil
+			}
 		}
 		self.bounds = gridPath.bounds
 		parent?.updateHolder(with: gridPath.bounds.size)
@@ -82,20 +86,9 @@ class Plane: UIView, Drawable {
 	// Updates the grid layers
 	func updateGrid(with transform: CGAffineTransform = .identity) {
 		let (bottomPath, gridPath) = self.makeUpdatedGrid(with: transform)
-		let bottomLayer = CAShapeLayer()
-		bottomLayer.path = bottomPath.cgPath
-		bottomLayer.strokeColor = UIColor(red: 0 / 255, green: 9 / 255, blue: 183 / 255, alpha: 1).cgColor
-		bottomLayer.lineWidth = bottomPath.lineWidth
-		
-		let gridLayer = CAShapeLayer()
-		gridLayer.path = gridPath.cgPath
-		gridLayer.strokeColor = UIColor(red: 0 / 255, green: 9 / 255, blue: 183 / 255, alpha: 1).cgColor
-		gridLayer.lineWidth = gridPath.lineWidth
-		if self.layer.sublayers?.count ?? 0 >= 4  {
-			self.layer.insertSublayer(bottomLayer, at: UInt32(2))
-			self.layer.insertSublayer(gridLayer, at: UInt32(3))
-			self.layer.sublayers?[4].removeFromSuperlayer()
-			self.layer.sublayers?[4].removeFromSuperlayer()
+		if self.layer.sublayers?.count ?? 0 >= 4, let bottomL = self.layer.sublayers?[2] as? CAShapeLayer, let gridL = self.layer.sublayers?[3] as? CAShapeLayer  {
+			bottomL.path = bottomPath.cgPath
+			gridL.path = gridPath.cgPath
 		}
 	}
 	
@@ -103,12 +96,12 @@ class Plane: UIView, Drawable {
 	func draw(path: UIBezierPath, with color: UIColor, at location: Int, having transform: CGAffineTransform) {
 		let layer = CAShapeLayer()
 		layer.path = self.scale(path: path, with: transform).cgPath
-		layer.strokeColor = color.cgColor
-		layer.lineCap = .round
 		layer.lineWidth = 5
+		layer.strokeColor = color.cgColor
 		if location + 4 < self.layer.sublayers?.count ?? 0 {
-			self.layer.insertSublayer(layer, at: UInt32(location + 4))
-			self.layer.sublayers?[location + 5].removeFromSuperlayer()
+			if let layer = self.layer.sublayers?[location + 4] as? CAShapeLayer {
+				layer.path = self.scale(path: path, with: transform).cgPath
+			}
 		} else {
 			self.layer.addSublayer(layer)
 		}

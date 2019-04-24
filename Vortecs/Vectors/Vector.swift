@@ -59,7 +59,7 @@ extension Vector {
      * Gets a normal vector to this one
      */
 	var normalVector: Vector {
-		return PolarVector(angle: self.angle + (Decimal(.pi) / 2), length: self.length, color: color, beginX: self.beginX, beginY: self.beginY)
+		return PolarVector(angle: self.angle + (Decimal(Double.pi) / 2), length: self.length, color: color, beginX: self.beginX, beginY: self.beginY)
 	}
 	
 	// Creates a Path representing the vector at the given x and y
