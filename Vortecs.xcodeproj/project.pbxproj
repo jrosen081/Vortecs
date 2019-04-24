@@ -12,9 +12,11 @@
 		A018D693226B7563002E6A80 /* TransformationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A018D692226B7563002E6A80 /* TransformationDelegate.swift */; };
 		A018D695226B86D3002E6A80 /* SelectorHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A018D694226B86D3002E6A80 /* SelectorHolder.swift */; };
 		A018D697226B8B00002E6A80 /* MoveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A018D696226B8B00002E6A80 /* MoveVC.swift */; };
+		A02FFFD7226FF1C8009CA849 /* StringToDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02FFFD6226FF1C8009CA849 /* StringToDecimal.swift */; };
 		A0407A94226D1C70008ECC0C /* CoordinateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0407A93226D1C70008ECC0C /* CoordinateDelegate.swift */; };
 		A0407A96226D1E30008ECC0C /* HoldingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0407A95226D1E30008ECC0C /* HoldingView.swift */; };
 		A0407A98226D3F97008ECC0C /* VectorDisplayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F14BB02224E821009DC4D2 /* VectorDisplayerTests.swift */; };
+		A0407A9C226EBD9F008ECC0C /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0407A9B226EBD9F008ECC0C /* CGFloatExtensions.swift */; };
 		A061C2DF2258034F0035C769 /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A061C2DE2258034F0035C769 /* InputController.swift */; };
 		A061C2E2225804580035C769 /* VectorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A061C2E1225804580035C769 /* VectorSource.swift */; };
 		A061C2E5225806280035C769 /* VectorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A061C2E4225806280035C769 /* VectorInteractor.swift */; };
@@ -50,8 +52,10 @@
 		A018D692226B7563002E6A80 /* TransformationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationDelegate.swift; sourceTree = "<group>"; };
 		A018D694226B86D3002E6A80 /* SelectorHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorHolder.swift; sourceTree = "<group>"; };
 		A018D696226B8B00002E6A80 /* MoveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveVC.swift; sourceTree = "<group>"; };
+		A02FFFD6226FF1C8009CA849 /* StringToDecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToDecimal.swift; sourceTree = "<group>"; };
 		A0407A93226D1C70008ECC0C /* CoordinateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateDelegate.swift; sourceTree = "<group>"; };
 		A0407A95226D1E30008ECC0C /* HoldingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingView.swift; sourceTree = "<group>"; };
+		A0407A9B226EBD9F008ECC0C /* CGFloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
 		A061C2DE2258034F0035C769 /* InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
 		A061C2E1225804580035C769 /* VectorSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorSource.swift; sourceTree = "<group>"; };
 		A061C2E4225806280035C769 /* VectorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorInteractor.swift; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 			children = (
 				A0F14BB02224E821009DC4D2 /* VectorDisplayerTests.swift */,
 				A0F14BB22224E821009DC4D2 /* Info.plist */,
+				A0407A9B226EBD9F008ECC0C /* CGFloatExtensions.swift */,
 			);
 			path = VortecsTests;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 		A0F14BC32224F146009DC4D2 /* Vectors */ = {
 			isa = PBXGroup;
 			children = (
+				A02FFFD6226FF1C8009CA849 /* StringToDecimal.swift */,
 				A0F14BC42224F154009DC4D2 /* CartesianVector.swift */,
 				A0F14BBD2224EA73009DC4D2 /* CGVectorExtension.swift */,
 				A0F14BC82224FB82009DC4D2 /* Vector.swift */,
@@ -315,6 +321,7 @@
 				A061C2E2225804580035C769 /* VectorSource.swift in Sources */,
 				A061C2EC22584E920035C769 /* Plane.swift in Sources */,
 				A067C7342267B6E0008BEA8D /* PreviousState.swift in Sources */,
+				A02FFFD7226FF1C8009CA849 /* StringToDecimal.swift in Sources */,
 				A0F14B9C2224E81E009DC4D2 /* AppDelegate.swift in Sources */,
 				A061C2EE22584EA60035C769 /* Drawable.swift in Sources */,
 			);
@@ -324,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0407A9C226EBD9F008ECC0C /* CGFloatExtensions.swift in Sources */,
 				A0407A98226D3F97008ECC0C /* VectorDisplayerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,7 +485,7 @@
 		A0F14BB62224E821009DC4D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SCB9RTL9PP;
@@ -496,7 +504,7 @@
 		A0F14BB72224E821009DC4D2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SCB9RTL9PP;

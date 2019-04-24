@@ -89,10 +89,10 @@ extension Decimal {
 	
 	// Calculates the angle between -pi and pi
 	func normalize() -> Decimal {
-		if self > Decimal(.pi) {
-			return (self - Decimal(2 * .pi)).normalize()
+		if self > Decimal(Double.pi) {
+			return (self - Decimal(2 * Double.pi)).normalize()
 		} else if self < (Decimal(-.pi)) {
-			return (self + Decimal(2 * .pi)).normalize()
+			return (self + Decimal(2 * Double.pi)).normalize()
 		} else {
 			return self
 		}

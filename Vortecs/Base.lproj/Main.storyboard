@@ -46,7 +46,7 @@
                                                                     <color key="backgroundColor" red="0.9443730857391256" green="0.9443730857391256" blue="0.9443730857391256" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="textColor"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
                                                                 </textField>
                                                             </subviews>
                                                         </stackView>
@@ -64,7 +64,7 @@
                                                                     <color key="backgroundColor" red="0.94509803921568625" green="0.9443730857391256" blue="0.9443730857391256" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="textColor"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
                                                                 </textField>
                                                             </subviews>
                                                         </stackView>
@@ -92,7 +92,7 @@
                                                                     <color key="backgroundColor" red="0.94509803921568625" green="0.9443730857391256" blue="0.9443730857391256" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="textColor"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
                                                                 </textField>
                                                             </subviews>
                                                         </stackView>
@@ -110,7 +110,7 @@
                                                                     <color key="backgroundColor" red="0.94509803921568625" green="0.9443730857391256" blue="0.9443730857391256" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="textColor"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
                                                                 </textField>
                                                             </subviews>
                                                         </stackView>
@@ -195,7 +195,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="69" height="119.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="cSM-FS-2BH" id="Rgf-vS-bvp"/>
                                                         </connections>
@@ -204,7 +204,7 @@
                                                         <rect key="frame" x="69" y="0.0" width="69" height="119.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="cSM-FS-2BH" id="XbN-Y3-Nk5"/>
                                                         </connections>
@@ -414,7 +414,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="103.5" height="149.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="b79-LU-rLv" id="hPV-8U-cQC"/>
                                                         </connections>
@@ -423,7 +423,7 @@
                                                         <rect key="frame" x="103.5" y="0.0" width="103.5" height="149.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="b79-LU-rLv" id="lKn-o6-85i"/>
                                                         </connections>
@@ -440,7 +440,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="103.5" height="149.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="b79-LU-rLv" id="asE-Ie-qNc"/>
                                                         </connections>
@@ -449,7 +449,7 @@
                                                         <rect key="frame" x="103.5" y="0.0" width="103.5" height="149.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="b79-LU-rLv" id="GmB-hY-QrD"/>
                                                         </connections>

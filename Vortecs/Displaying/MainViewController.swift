@@ -52,7 +52,6 @@ class MainViewController: UIViewController {
 		self.plane.updateGrid()
 		self.dataSource.draw(on: plane)
 		self.plane.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapped)))
-		self.plane.border = (UIColor.black.cgColor, 2)
 		self.plane.parent = self
 		self.plane.startGrid(with: .identity)
 		let gesture = UITapGestureRecognizer(target: self, action: #selector(self.center))
@@ -180,6 +179,10 @@ extension CGRect {
 extension CGSize {
 	static func * (lhs: CGSize, rhs: CGFloat) -> CGSize {
 		return CGSize(width: lhs.width * rhs, height: lhs.height * rhs)
+	}
+	
+	static func < (lhs: CGSize, rhs: CGSize) -> Bool {
+		return lhs.width < rhs.width && lhs.height < rhs.height
 	}
 }
 
