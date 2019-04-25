@@ -36,7 +36,5 @@ class VectorDisplayerTests: XCTestCase {
 		XCTAssertTrue((.pi / 2).toDegrees() == 90)
 		XCTAssertTrue((.pi / 4).toDegrees() == 45)
 	}
-    func testPerformanceExample() {
-    }
 
 }

@@ -53,7 +53,7 @@ class MainViewController: UIViewController {
 		self.dataSource.draw(on: plane)
 		self.plane.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapped)))
 		self.plane.parent = self
-		let gesture = UITapGestureRecognizer(target: self, action: #selector(self.center))
+		let gesture = UITapGestureRecognizer(target: self, action: #selector(self.center(_:)))
 		gesture.numberOfTapsRequired = 2
 		self.plane.addGestureRecognizer(gesture)
 	}
@@ -64,10 +64,8 @@ class MainViewController: UIViewController {
 	}
 	
 	// Centers the view
-	@objc func center() {
-		UIView.animate(withDuration: 0.1) {
-			self.planeHolder.setContentOffset(CGPoint(x: self.plane.frame.midX - self.planeHolder.frame.width / 2, y: self.plane.frame.midY - self.planeHolder.frame.height / 2), animated: false)
-		}
+	@objc func center(_ sender: Any = true) {
+		self.planeHolder.setContentOffset(CGPoint(x: self.plane.frame.midX - self.planeHolder.frame.width / 2, y: self.plane.frame.midY - self.planeHolder.frame.height / 2), animated: !(sender is Bool))
 	}
 	
 	// Sets up the stack view when it gets moved

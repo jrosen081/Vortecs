@@ -9,14 +9,9 @@
 import UIKit
 
 class Plane: UIView, Drawable {
-	override var translatesAutoresizingMaskIntoConstraints: Bool {
-		get{return true}
-		set{super.translatesAutoresizingMaskIntoConstraints = newValue}
-	}
 	
 	override func didMoveToSuperview() {
 		super.didMoveToSuperview()
-		self.layer.speed = 2
 	}
 	
 	weak var parent: HoldingView?
