@@ -1,6 +1,0 @@
-framework module Pods_VortecsTests {
-  umbrella header "Pods-VortecsTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
