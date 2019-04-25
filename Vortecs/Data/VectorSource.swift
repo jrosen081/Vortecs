@@ -148,6 +148,7 @@ class VectorSource: NSObject, VectorInteractor {
 		self.transform = .identity
 		self.drawingDelegate?.startGrid(with: self.transform)
 		self.fixManager.allowFix(false)
+		self.drawAllVectors()
 	}
 	
 	// Tries to undo the operations

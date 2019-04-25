@@ -10,9 +10,7 @@
 		A018D68F22694561002E6A80 /* UndoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A018D68E22694561002E6A80 /* UndoDelegate.swift */; };
 		A018D691226B73AD002E6A80 /* TransformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A018D690226B73AD002E6A80 /* TransformationController.swift */; };
 		A018D693226B7563002E6A80 /* TransformationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A018D692226B7563002E6A80 /* TransformationDelegate.swift */; };
-		A018D695226B86D3002E6A80 /* SelectorHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A018D694226B86D3002E6A80 /* SelectorHolder.swift */; };
 		A018D697226B8B00002E6A80 /* MoveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A018D696226B8B00002E6A80 /* MoveVC.swift */; };
-		A02FFFD7226FF1C8009CA849 /* StringToDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02FFFD6226FF1C8009CA849 /* StringToDecimal.swift */; };
 		A0407A94226D1C70008ECC0C /* CoordinateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0407A93226D1C70008ECC0C /* CoordinateDelegate.swift */; };
 		A0407A96226D1E30008ECC0C /* HoldingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0407A95226D1E30008ECC0C /* HoldingView.swift */; };
 		A0407A98226D3F97008ECC0C /* VectorDisplayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F14BB02224E821009DC4D2 /* VectorDisplayerTests.swift */; };
@@ -34,6 +32,8 @@
 		A0F14BC52224F154009DC4D2 /* CartesianVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F14BC42224F154009DC4D2 /* CartesianVector.swift */; };
 		A0F14BC92224FB82009DC4D2 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F14BC82224FB82009DC4D2 /* Vector.swift */; };
 		A0F14BCB2224FBD3009DC4D2 /* PolarVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F14BCA2224FBD3009DC4D2 /* PolarVector.swift */; };
+		B106E7F2A12B11CE56C3E03D /* Pods_Vortecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FB2EBB4F8FBCA1AD062C3F /* Pods_Vortecs.framework */; };
+		B37111C93D55DB7F9F2EBBBF /* Pods_VortecsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319C1C519DBF1C0CFCADA25C /* Pods_VortecsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,12 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		319C1C519DBF1C0CFCADA25C /* Pods_VortecsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VortecsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43FB2EBB4F8FBCA1AD062C3F /* Pods_Vortecs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vortecs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85CD52B6B374A37882E6518E /* Pods-VortecsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VortecsTests.debug.xcconfig"; path = "Target Support Files/Pods-VortecsTests/Pods-VortecsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A018D68E22694561002E6A80 /* UndoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoDelegate.swift; sourceTree = "<group>"; };
 		A018D690226B73AD002E6A80 /* TransformationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationController.swift; sourceTree = "<group>"; };
 		A018D692226B7563002E6A80 /* TransformationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationDelegate.swift; sourceTree = "<group>"; };
-		A018D694226B86D3002E6A80 /* SelectorHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorHolder.swift; sourceTree = "<group>"; };
 		A018D696226B8B00002E6A80 /* MoveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveVC.swift; sourceTree = "<group>"; };
-		A02FFFD6226FF1C8009CA849 /* StringToDecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToDecimal.swift; sourceTree = "<group>"; };
 		A0407A93226D1C70008ECC0C /* CoordinateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateDelegate.swift; sourceTree = "<group>"; };
 		A0407A95226D1E30008ECC0C /* HoldingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingView.swift; sourceTree = "<group>"; };
 		A0407A9B226EBD9F008ECC0C /* CGFloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 		A061C2EB22584E920035C769 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		A061C2ED22584EA60035C769 /* Drawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
 		A067C7332267B6E0008BEA8D /* PreviousState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousState.swift; sourceTree = "<group>"; };
+		A0D7F49E39B720D1219A31AD /* Pods-Vortecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vortecs.release.xcconfig"; path = "Target Support Files/Pods-Vortecs/Pods-Vortecs.release.xcconfig"; sourceTree = "<group>"; };
 		A0F14B982224E81E009DC4D2 /* Vortecs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vortecs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F14B9B2224E81E009DC4D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0F14B9D2224E81E009DC4D2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,8 @@
 		A0F14BC42224F154009DC4D2 /* CartesianVector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartesianVector.swift; sourceTree = "<group>"; };
 		A0F14BC82224FB82009DC4D2 /* Vector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
 		A0F14BCA2224FBD3009DC4D2 /* PolarVector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarVector.swift; sourceTree = "<group>"; };
+		D42E81C2A50FC2E6DCF4BFBA /* Pods-Vortecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vortecs.debug.xcconfig"; path = "Target Support Files/Pods-Vortecs/Pods-Vortecs.debug.xcconfig"; sourceTree = "<group>"; };
+		DF2CB755F840005109C07E1B /* Pods-VortecsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VortecsTests.release.xcconfig"; path = "Target Support Files/Pods-VortecsTests/Pods-VortecsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B106E7F2A12B11CE56C3E03D /* Pods_Vortecs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,12 +97,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37111C93D55DB7F9F2EBBBF /* Pods_VortecsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E0B1B4AFDEB900DBF0EE1E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D42E81C2A50FC2E6DCF4BFBA /* Pods-Vortecs.debug.xcconfig */,
+				A0D7F49E39B720D1219A31AD /* Pods-Vortecs.release.xcconfig */,
+				85CD52B6B374A37882E6518E /* Pods-VortecsTests.debug.xcconfig */,
+				DF2CB755F840005109C07E1B /* Pods-VortecsTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		80E892B49358FF02E959536D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43FB2EBB4F8FBCA1AD062C3F /* Pods_Vortecs.framework */,
+				319C1C519DBF1C0CFCADA25C /* Pods_VortecsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A026BEDE225D018100DB32A9 /* Displaying */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +141,6 @@
 				A061C2E1225804580035C769 /* VectorSource.swift */,
 				A061C2E9225837370035C769 /* VectorUpdate.swift */,
 				A067C7332267B6E0008BEA8D /* PreviousState.swift */,
-				A018D694226B86D3002E6A80 /* SelectorHolder.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -148,6 +173,8 @@
 				A0F14B9A2224E81E009DC4D2 /* Vortecs */,
 				A0F14BAF2224E821009DC4D2 /* VortecsTests */,
 				A0F14B992224E81E009DC4D2 /* Products */,
+				6E0B1B4AFDEB900DBF0EE1E8 /* Pods */,
+				80E892B49358FF02E959536D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,7 +217,6 @@
 		A0F14BC32224F146009DC4D2 /* Vectors */ = {
 			isa = PBXGroup;
 			children = (
-				A02FFFD6226FF1C8009CA849 /* StringToDecimal.swift */,
 				A0F14BC42224F154009DC4D2 /* CartesianVector.swift */,
 				A0F14BBD2224EA73009DC4D2 /* CGVectorExtension.swift */,
 				A0F14BC82224FB82009DC4D2 /* Vector.swift */,
@@ -206,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0F14BB52224E821009DC4D2 /* Build configuration list for PBXNativeTarget "Vortecs" */;
 			buildPhases = (
+				242C57E4156B9BED60AF4444 /* [CP] Check Pods Manifest.lock */,
 				A0F14B942224E81E009DC4D2 /* Sources */,
 				A0F14B952224E81E009DC4D2 /* Frameworks */,
 				A0F14B962224E81E009DC4D2 /* Resources */,
+				0A41923BB49F36FD2C48EA45 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -223,6 +251,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0F14BB82224E821009DC4D2 /* Build configuration list for PBXNativeTarget "VortecsTests" */;
 			buildPhases = (
+				5CE35E54137343387BCE2CB5 /* [CP] Check Pods Manifest.lock */,
 				A0F14BA82224E821009DC4D2 /* Sources */,
 				A0F14BA92224E821009DC4D2 /* Frameworks */,
 				A0F14BAA2224E821009DC4D2 /* Resources */,
@@ -297,13 +326,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A41923BB49F36FD2C48EA45 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vortecs/Pods-Vortecs-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MathParser/MathParser.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MathParser.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vortecs/Pods-Vortecs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		242C57E4156B9BED60AF4444 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vortecs-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CE35E54137343387BCE2CB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VortecsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A0F14B942224E81E009DC4D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A018D697226B8B00002E6A80 /* MoveVC.swift in Sources */,
-				A018D695226B86D3002E6A80 /* SelectorHolder.swift in Sources */,
 				A0F14BBE2224EA73009DC4D2 /* CGVectorExtension.swift in Sources */,
 				A0F14BCB2224FBD3009DC4D2 /* PolarVector.swift in Sources */,
 				A0F14B9E2224E81E009DC4D2 /* MainViewController.swift in Sources */,
@@ -321,7 +418,6 @@
 				A061C2E2225804580035C769 /* VectorSource.swift in Sources */,
 				A061C2EC22584E920035C769 /* Plane.swift in Sources */,
 				A067C7342267B6E0008BEA8D /* PreviousState.swift in Sources */,
-				A02FFFD7226FF1C8009CA849 /* StringToDecimal.swift in Sources */,
 				A0F14B9C2224E81E009DC4D2 /* AppDelegate.swift in Sources */,
 				A061C2EE22584EA60035C769 /* Drawable.swift in Sources */,
 			);
@@ -484,6 +580,7 @@
 		};
 		A0F14BB62224E821009DC4D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D42E81C2A50FC2E6DCF4BFBA /* Pods-Vortecs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -503,6 +600,7 @@
 		};
 		A0F14BB72224E821009DC4D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0D7F49E39B720D1219A31AD /* Pods-Vortecs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -522,6 +620,7 @@
 		};
 		A0F14BB92224E821009DC4D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85CD52B6B374A37882E6518E /* Pods-VortecsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -543,6 +642,7 @@
 		};
 		A0F14BBA2224E821009DC4D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF2CB755F840005109C07E1B /* Pods-VortecsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

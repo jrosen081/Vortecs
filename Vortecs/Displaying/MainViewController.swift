@@ -49,11 +49,10 @@ class MainViewController: UIViewController {
 		self.planeHolder.addSubview(plane)
 		self.planeHolder.contentSize = self.plane.bounds.size
 		self.planeHolder.setContentOffset(CGPoint(x: self.plane.bounds.width / 4, y: self.plane.bounds.height / 4), animated: false)
-		self.plane.updateGrid()
+		self.plane.startGrid()
 		self.dataSource.draw(on: plane)
 		self.plane.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapped)))
 		self.plane.parent = self
-		self.plane.startGrid(with: .identity)
 		let gesture = UITapGestureRecognizer(target: self, action: #selector(self.center))
 		gesture.numberOfTapsRequired = 2
 		self.plane.addGestureRecognizer(gesture)
@@ -75,8 +74,6 @@ class MainViewController: UIViewController {
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
 		self.setUpStackView(view: outsideStackView)
-		self.dataSource.redrawGrid()
-		self.dataSource.drawAllVectors()
 	}
 	
 	// Redraws all of the vectors
@@ -124,10 +121,12 @@ class MainViewController: UIViewController {
 		self.tableView.tableView.reloadData()
 	}
 	@IBAction func undo(_ sender: Any) {
+		self.plane.frame = CGRect(x: 0, y: 0, width: self.planeHolder.frame.width * 2 * self.planeHolder.zoomScale, height: self.planeHolder.frame.height * 2 * self.planeHolder.zoomScale)
 		self.dataSource.undo()
 		self.tableView.tableView.reloadData()
 	}
 	@IBAction func fixCoordinates(_ sender: Any) {
+		self.plane.frame = CGRect(x: 0, y: 0, width: self.planeHolder.frame.width * 2 * self.planeHolder.zoomScale, height: self.planeHolder.frame.height * 2 * self.planeHolder.zoomScale)
 		self.dataSource.fixCoordinates()
 	}
 	@IBAction func setUpTransformation(_ sender: Any) {
@@ -166,6 +165,7 @@ extension MainViewController: HoldingView {
 		self.planeHolder.contentSize = size * self.planeHolder.zoomScale
 		self.plane.frame = CGRect(x: 0, y: 0, width: size.width * self.planeHolder.zoomScale, height: size.height * self.planeHolder.zoomScale)
 		self.center()
+		self.planeHolder.isScrollEnabled = !(size < self.planeHolder.frame.size)
 	}
 }
 
@@ -182,7 +182,7 @@ extension CGSize {
 	}
 	
 	static func < (lhs: CGSize, rhs: CGSize) -> Bool {
-		return lhs.width < rhs.width && lhs.height < rhs.height
+		return lhs.width < rhs.width || lhs.height < rhs.height
 	}
 }
 

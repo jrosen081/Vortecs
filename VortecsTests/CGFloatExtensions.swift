@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import Vortecs
+@testable import MathParser
 
 class CGFloatExtensions: XCTestCase {
 
@@ -30,5 +31,6 @@ class CGFloatExtensions: XCTestCase {
 		XCTAssertEqual(CGFloat.convert(str: "4 / 2"), 2)
 		XCTAssertEqual(CGFloat.convert(str: "-3"), -3)
 		XCTAssertEqual(CGFloat.convert(str: "-3 * -4"), 12)
+		XCTAssertEqual(Parser.parse(string: "2 ^ 3")?.evaluate(), 8)
 	}
 }

@@ -10,6 +10,6 @@ import Foundation
 import UIKit
 
 protocol HoldingView: class {
-	// Updates the view of the contained view
+	/// Updates the view of the contained view
 	func updateHolder(with size: CGSize)
 }

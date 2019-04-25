@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MathParser
 
 class TransformationController: UIViewController , UITextFieldDelegate{
 	@IBOutlet weak var x0: UITextField!
@@ -48,7 +49,7 @@ class TransformationController: UIViewController , UITextFieldDelegate{
 
 extension CGFloat {
 	static func convert(str: String) -> CGFloat? {
-		if let val = Parser.parse(string: str) {
+		if let val = Parser.parse(string: str)?.evaluate() {
 			return CGFloat(val.doubleValue)
 		} else {
 			return nil

@@ -177,9 +177,9 @@ extension InputController: TransformationDelegate {
 	// Perform a transformation
 	func perform(transform: CGAffineTransform) {
 		var count: CGFloat = 0
-		let difference = (.identity - transform) / 60
+		let difference = (.identity - transform) / 50
 		Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) {timer in
-			if count == 60 {
+			if count == 50 {
 				self.source?.finishTransform(with: transform)
 				self.tableView.reloadData()
 				timer.invalidate()
