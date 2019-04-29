@@ -19,6 +19,7 @@ class Plane: UIView, Drawable {
 	private var startingTopLayer: CAShapeLayer = CAShapeLayer()
 	private var startingHoldingLayer = CAShapeLayer()
 	private var startingHoldingTopLayer = CAShapeLayer()
+	var usableBounds: CGRect = .zero
 	
 	/// Starts the grid
 	func startGrid(with transform: CGAffineTransform = .identity) {
@@ -72,7 +73,7 @@ class Plane: UIView, Drawable {
 	
 	/// Makes the path for the two layers of the grid
 	private func makeUpdatedGrid(with transform: CGAffineTransform) -> (UIBezierPath, UIBezierPath) {
-		let rect = self.bounds
+		let rect = self.usableBounds
 		let inBetweenPath = UIBezierPath()
 		for xIdx in stride(from: rect.midX, to: rect.maxX, by: 10) {
 			inBetweenPath.move(to: CGPoint(x: xIdx, y: 0))

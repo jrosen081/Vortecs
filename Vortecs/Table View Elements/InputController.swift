@@ -17,7 +17,6 @@ class InputController: UITableViewController {
         super.viewDidLoad()
 		self.tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: self.tableView.rowHeight / 10, right: 0)
 		self.tableView.separatorStyle = .singleLine
-		self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.endEditing)))
 	}
 
     // MARK: - Table view data source
@@ -88,7 +87,7 @@ class InputController: UITableViewController {
 		alert.addAction(normalize)
 //		alert.addAction(move)
 		alert.addAction(cancel)
-		self.present(alert, animated: false, completion: nil)
+		self.displayer?.present(alert, animated: false, completion: nil)
 	}
 	
 	// Updates the size of the cell depending on the orientation and screen

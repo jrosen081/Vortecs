@@ -25,6 +25,7 @@ class MainViewController: UIViewController {
 	@IBOutlet weak var verticalConstraint: NSLayoutConstraint!
 	@IBOutlet weak var fixCoordinates: UIButton!
 	
+	// Sets up the data and the table view.
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		dataSource  = VectorSource(undoManager: self, fixManager: self)
@@ -43,9 +44,12 @@ class MainViewController: UIViewController {
 		}
 	}
 	
+	// Sets up the plane to be the correct size
 	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
 		self.makeUndoAvailable(available: false)
 		plane = Plane(frame: self.planeHolder.bounds.doubled)
+		self.plane.usableBounds = self.plane.frame
 		self.planeHolder.addSubview(plane)
 		self.planeHolder.contentSize = self.plane.bounds.size
 		self.planeHolder.setContentOffset(CGPoint(x: self.plane.bounds.width / 4, y: self.plane.bounds.height / 4), animated: false)
@@ -53,9 +57,11 @@ class MainViewController: UIViewController {
 		self.dataSource.draw(on: plane)
 		self.plane.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapped)))
 		self.plane.parent = self
+		self.planeHolder.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapped)))
 		let gesture = UITapGestureRecognizer(target: self, action: #selector(self.center(_:)))
 		gesture.numberOfTapsRequired = 2
 		self.plane.addGestureRecognizer(gesture)
+		self.planeHolder.addGestureRecognizer(gesture)
 	}
 	
 	// This gets called when someone clicks on the plane
@@ -79,6 +85,7 @@ class MainViewController: UIViewController {
 		super.viewWillTransition(to: size, with: coordinator)
 		DispatchQueue.main.asyncAfter(deadline: .now() + 0.03) {
 			self.plane.frame = self.planeHolder.bounds.doubled
+			self.plane.usableBounds = self.plane.frame
 			self.center()
 			self.dataSource.redrawGrid()
 			self.dataSource.drawAllVectors()
@@ -162,8 +169,17 @@ extension MainViewController: HoldingView {
 	func updateHolder(with size: CGSize) {
 		self.planeHolder.contentSize = size * self.planeHolder.zoomScale
 		self.plane.frame = CGRect(x: 0, y: 0, width: size.width * self.planeHolder.zoomScale, height: size.height * self.planeHolder.zoomScale)
+		if size < self.planeHolder.frame.size {
+			self.plane.frame.origin = CGPoint(x: (self.planeHolder.frame.width / 2) * self.planeHolder.zoomScale - size.width, y: (self.planeHolder.frame.height / 2) * self.planeHolder.zoomScale - size.height)
+			self.planeHolder.contentSize = self.planeHolder.frame.size
+		} else if size.width < self.planeHolder.frame.width {
+			self.plane.frame.origin = CGPoint(x: (self.planeHolder.frame.width / 2) * self.planeHolder.zoomScale - size.width, y: 0)
+			self.planeHolder.contentSize = CGSize(width: self.planeHolder.frame.width, height: size.height)
+		} else if size.height < self.planeHolder.frame.height {
+			self.plane.frame.origin = CGPoint(x: 0, y: (self.planeHolder.frame.height / 2) * self.planeHolder.zoomScale - size.height)
+			self.planeHolder.contentSize = CGSize(width: size.width, height: self.planeHolder.frame.height)
+		}
 		self.center()
-		self.planeHolder.isScrollEnabled = !(size < self.planeHolder.frame.size)
 	}
 }
 
@@ -180,7 +196,7 @@ extension CGSize {
 	}
 	
 	static func < (lhs: CGSize, rhs: CGSize) -> Bool {
-		return lhs.width < rhs.width || lhs.height < rhs.height
+		return lhs.width < rhs.width && lhs.height < rhs.height
 	}
 }
 
