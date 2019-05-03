@@ -12,6 +12,7 @@
 		A018D693226B7563002E6A80 /* TransformationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A018D692226B7563002E6A80 /* TransformationDelegate.swift */; };
 		A018D697226B8B00002E6A80 /* MoveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A018D696226B8B00002E6A80 /* MoveVC.swift */; };
 		A0298D0D22726B36000C5BBE /* VectorSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0298D0C22726B36000C5BBE /* VectorSourceTest.swift */; };
+		A0298D17227A5683000C5BBE /* VectorTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0298D16227A5683000C5BBE /* VectorTester.swift */; };
 		A0407A94226D1C70008ECC0C /* CoordinateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0407A93226D1C70008ECC0C /* CoordinateDelegate.swift */; };
 		A0407A96226D1E30008ECC0C /* HoldingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0407A95226D1E30008ECC0C /* HoldingView.swift */; };
 		A0407A98226D3F97008ECC0C /* VectorDisplayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F14BB02224E821009DC4D2 /* VectorDisplayerTests.swift */; };
@@ -56,6 +57,7 @@
 		A018D692226B7563002E6A80 /* TransformationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationDelegate.swift; sourceTree = "<group>"; };
 		A018D696226B8B00002E6A80 /* MoveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveVC.swift; sourceTree = "<group>"; };
 		A0298D0C22726B36000C5BBE /* VectorSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorSourceTest.swift; sourceTree = "<group>"; };
+		A0298D16227A5683000C5BBE /* VectorTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorTester.swift; sourceTree = "<group>"; };
 		A0407A93226D1C70008ECC0C /* CoordinateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateDelegate.swift; sourceTree = "<group>"; };
 		A0407A95226D1E30008ECC0C /* HoldingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingView.swift; sourceTree = "<group>"; };
 		A0407A9B226EBD9F008ECC0C /* CGFloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				A0F14BB22224E821009DC4D2 /* Info.plist */,
 				A0407A9B226EBD9F008ECC0C /* CGFloatExtensions.swift */,
 				A0298D0C22726B36000C5BBE /* VectorSourceTest.swift */,
+				A0298D16227A5683000C5BBE /* VectorTester.swift */,
 			);
 			path = VortecsTests;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				A0407A9C226EBD9F008ECC0C /* CGFloatExtensions.swift in Sources */,
 				A0298D0D22726B36000C5BBE /* VectorSourceTest.swift in Sources */,
 				A0407A98226D3F97008ECC0C /* VectorDisplayerTests.swift in Sources */,
+				A0298D17227A5683000C5BBE /* VectorTester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -47,6 +47,17 @@ class VectorSourceTest: XCTestCase, UndoDelegate, CoordinateDelegate {
 		XCTAssertFalse(vectorSource.canUndo)
 	}
 	
+	func testRemove() {
+		self.vectorSource.addVector()
+		self.vectorSource.addVector()
+		self.vectorSource.addVector()
+		self.vectorSource.updateVector(at: 2, with: .angle(val: 1))
+	  	XCTAssertEqual(self.vectorSource.totalVectors, 3)
+		XCTAssertEqual(self.vectorSource.canUndo, true)
+		self.vectorSource.removeVector(at: 2)
+		XCTAssertEqual(self.vectorSource.totalVectors, 2)
+	}
+	
 	
 	
 	func makeUndoAvailable(available: Bool) {
