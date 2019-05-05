@@ -17,7 +17,6 @@ class InputController: UITableViewController {
         super.viewDidLoad()
 		self.tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: self.tableView.rowHeight / 10, right: 0)
 		self.tableView.separatorStyle = .singleLine
-		self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.endEditing)))
 	}
 
     // MARK: - Table view data source
@@ -35,10 +34,7 @@ class InputController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		if let cell = tableView.dequeueReusableCell(withIdentifier: "VectorCell") as? VectorCell{
 			if let vector = source?.vector(at: indexPath.row){
-				cell.xField.text = "\((vector.endX - vector.beginX).twoDigits)"
-				cell.yField.text = "\((vector.endY - vector.beginY).twoDigits)"
-				cell.angleField.text = "\(vector.angle.twoDigits)"
-				cell.lengthField.text = "\(vector.length.twoDigits)"
+				source?.updateCellValues(at: indexPath.row, cell: cell)
 				cell.xField.restorationIdentifier = "\(indexPath.row)"
 				cell.yField.restorationIdentifier = "\(indexPath.row)"
 				cell.angleField.restorationIdentifier = "\(indexPath.row)"
@@ -51,7 +47,7 @@ class InputController: UITableViewController {
 				cell.angleField.delegate = self
 				cell.lengthField.delegate = self
 				cell.border = (vector.color.cgColor, 1)
-        	return cell
+        		return cell
 			}
 		}
 		return UITableViewCell()
@@ -88,24 +84,26 @@ class InputController: UITableViewController {
 		alert.addAction(normalize)
 //		alert.addAction(move)
 		alert.addAction(cancel)
-		self.present(alert, animated: false, completion: nil)
+		self.displayer?.present(alert, animated: false, completion: nil)
 	}
 	
 	// Updates the size of the cell depending on the orientation and screen
 	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		let size: CGFloat
 		if UIDevice.current.userInterfaceIdiom == .pad {
 			if UIDevice.current.orientation == .portrait || UIDevice.current.orientation == .portraitUpsideDown {
-				return UIScreen.main.bounds.height / 8
+				size = UIScreen.main.bounds.height / 8
 			} else {
-				return UIScreen.main.bounds.height / 6
+				size = UIScreen.main.bounds.height / 6
 			}
 		} else {
 			if UIDevice.current.orientation == .portrait || UIDevice.current.orientation == .portraitUpsideDown {
-				return UIScreen.main.bounds.height / 5
+				size = UIScreen.main.bounds.height / 5
 			} else {
-				return UIScreen.main.bounds.height / 3
+				size = UIScreen.main.bounds.height / 3
 			}
 		}
+		return max(size, 175)
 	}
 	
 	
@@ -153,8 +151,7 @@ class InputController: UITableViewController {
 
 extension InputController: UITextFieldDelegate {
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-		textField.endEditing(true)
-		return true
+		return textField.resignFirstResponder()
 	}
 	
 	func textFieldDidEndEditing(_ textField: UITextField) {
@@ -168,7 +165,9 @@ extension InputController: UITextFieldDelegate {
 			} else if type == "y" {
 				self.source?.updateVector(at: num, with: .y(val: Decimal(value)))
 			}
-			self.tableView.reloadRows(at: [IndexPath(item: num, section: 0)], with: .none)
+			if let cell = self.tableView.cellForRow(at: IndexPath(item: num, section: 0)) as? VectorCell{
+				self.source?.updateCellValues(at: num, cell: cell)
+			}
 		}
 	}
 }
@@ -177,9 +176,9 @@ extension InputController: TransformationDelegate {
 	// Perform a transformation
 	func perform(transform: CGAffineTransform) {
 		var count: CGFloat = 0
-		let difference = (.identity - transform) / 60
+		let difference = (.identity - transform) / 50
 		Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) {timer in
-			if count == 60 {
+			if count == 50 {
 				self.source?.finishTransform(with: transform)
 				self.tableView.reloadData()
 				timer.invalidate()

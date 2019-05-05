@@ -10,17 +10,17 @@ import Foundation
 import UIKit
 
 protocol Vector {
-	//The beginning x value
+	/// The beginning x value
 	var beginX: Decimal {get}
-	//The end y value
+	/// The end y value
 	var beginY: Decimal {get}
-	// The x value
+	///  The x value
 	var endX: Decimal {get}
-	// The y value
+	/// The y value
 	var endY: Decimal {get}
-	// The angle
+	/// The angle
 	var angle: Decimal {get}
-	// The length
+	/// The length
 	var length: Decimal {get}
 	
 	/**
@@ -29,29 +29,32 @@ protocol Vector {
 	 */
 	func negate() -> Vector
 	
-	// Updates and returns the new vector with the given update
+	/// Updates and returns the new vector with the given update
 	func update(with update: Update) -> Vector
 	
-	// Creates a Path representing the vector at the given x and y
+	/// Creates a Path representing the vector at the given x and y
 	func path() -> (UIBezierPath, UIColor)
 	
-	// Gets the color
+	/// Gets the color
 	var color: UIColor {get}
 	
-	// Transforms the Vector for display
+	/// Transforms the Vector for display
 	func transformed(with transform: CGAffineTransform) -> Vector
+	
+	/// Fixes the cell with values
+	func updateCellValue(cell: VectorCell)
 }
 
 extension Vector {
 	
-	// Transforms the Vector for display
+	/// Transforms the Vector for display
 	func transformed(with transform: CGAffineTransform) -> Vector {
 		let newXY = CGPoint(x: self.beginX.doubleValue, y: self.beginY.doubleValue).applying(transform)
 		let newEndXY = CGPoint(x: self.endX.doubleValue, y: self.endY.doubleValue).applying(transform)
 		return CartesianVector(x: Decimal(Double(newEndXY.x)), y: Decimal(Double(newEndXY.y)), color: self.color, beginX: Decimal(Double(newXY.x)), beginY: Decimal(Double(newXY.y)))
 	}
 	
-	// A Zero vector
+	/// A Zero vector
 	static var zero: Vector {
 		return CartesianVector(x: 0, y: 0)
 	}
@@ -62,7 +65,7 @@ extension Vector {
 		return PolarVector(angle: self.angle + (Decimal(Double.pi) / 2), length: self.length, color: color, beginX: self.beginX, beginY: self.beginY)
 	}
 	
-	// Creates a Path representing the vector at the given x and y
+	/// Creates a Path representing the vector at the given x and y
 	func path() -> (UIBezierPath, UIColor) {
 		let vector = UIBezierPath()
 		vector.move(to: CGPoint(x: self.beginX.doubleValue, y: -self.beginY.doubleValue))
@@ -76,9 +79,18 @@ extension Vector {
 		}
 		return (UIBezierPath(), UIColor.black)
 	}
+	
+	/// Fixes the cell with values
+	func updateCellValue(cell: VectorCell) {
+		cell.angleField.text = self.angle.twoDigits
+		cell.lengthField.text = self.length.twoDigits
+		cell.xField.text = (self.endX - self.beginX).twoDigits
+		cell.yField.text = (self.endY - self.beginY).twoDigits
+	}
 }
 
 extension Decimal {
+	/// Displays the value to be 2 decimal places
 	var twoDigits: String {
 		return String(format: "%.2f", self.doubleValue)
 	}

@@ -83,8 +83,8 @@ class VectorSource: NSObject, VectorInteractor {
 	func updateVector(at index: Int, with update: Update) {
 		if index < self.vectors.count {
 			self.previous.append(PreviousState(vectors: self.vectors, transformation: self.transform))
-			self.vectors[index] = self.vectors[index].update(with: update)
-			let path = self.vectors[index].path()
+			self.vectors[index] = self.vector(at: index).update(with: update)
+			let path = self.vector(at: index).path()
 			path.0.apply(self.inBetween)
 			self.drawingDelegate?.draw(path: path.0, with: path.1, at: index, having: self.inBetween)
 			self.allowRedo()
@@ -148,6 +148,7 @@ class VectorSource: NSObject, VectorInteractor {
 		self.transform = .identity
 		self.drawingDelegate?.startGrid(with: self.transform)
 		self.fixManager.allowFix(false)
+		self.drawAllVectors()
 	}
 	
 	// Tries to undo the operations
@@ -156,5 +157,10 @@ class VectorSource: NSObject, VectorInteractor {
 			self.canUndo = !self.previous.isEmpty
 			self.undoManager.makeUndoAvailable(available: !self.previous.isEmpty)
 		}
+	}
+	
+	// Updates cell values
+	func updateCellValues(at index: Int, cell: VectorCell) {
+		self.vector(at: index).updateCellValue(cell: cell)
 	}
 }

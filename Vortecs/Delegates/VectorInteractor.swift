@@ -52,4 +52,7 @@ protocol VectorInteractor: class {
 	// Fixes the coordinate system in the plane
 	func fixCoordinates()
 	
+	// Updates cell values
+	func updateCellValues(at index: Int, cell: VectorCell)
+	
 }
