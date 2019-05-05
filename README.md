@@ -10,7 +10,7 @@ Vortecs is a free, offline, and simple education tool for displaying 2D vectors 
   - [x] Undo 2D linear transformations
  
 # Desktop Version
-A desktop version of this app is in development using Java, and its progress can be monitored [here](https://github.com/denk0403/Grapher-2.0).
+A desktop version of this app is in development using Java, and its progress can be monitored [here](https://github.com/denk0403/Vortecs-Desktop).
 
 # Built With
 - Swift 5.0
