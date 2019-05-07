@@ -32,7 +32,7 @@ class InputController: UITableViewController {
 
 	// Gets the scell from the data source
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		if let cell = tableView.dequeueReusableCell(withIdentifier: "VectorCell") as? VectorCell{
+		if let cell = tableView.dequeueReusableCell(withIdentifier: "VectorCell", for: indexPath) as? VectorCell{
 			if let vector = source?.vector(at: indexPath.row){
 				source?.updateCellValues(at: indexPath.row, cell: cell)
 				cell.xField.restorationIdentifier = "\(indexPath.row)"
@@ -151,7 +151,7 @@ class InputController: UITableViewController {
 
 extension InputController: UITextFieldDelegate {
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-		return textField.resignFirstResponder()
+		return textField.endEditing(true)
 	}
 	
 	func textFieldDidEndEditing(_ textField: UITextField) {

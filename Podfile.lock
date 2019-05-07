@@ -1,5 +1,5 @@
 PODS:
-  - MathParser (1.2)
+  - MathParser (1.3)
 
 DEPENDENCIES:
   - MathParser
@@ -9,7 +9,7 @@ SPEC REPOS:
     - MathParser
 
 SPEC CHECKSUMS:
-  MathParser: 3349fbaa2201d16e52e5d4dddbba1c014127cbf9
+  MathParser: ca267f01f82bdf3a086b0cc4c76450e9892befc7
 
 PODFILE CHECKSUM: ccba2f96a4f56318c3d5787ae0484882bc376dc9
 
