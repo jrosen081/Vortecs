@@ -25,6 +25,12 @@
 		A061C2EC22584E920035C769 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = A061C2EB22584E920035C769 /* Plane.swift */; };
 		A061C2EE22584EA60035C769 /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A061C2ED22584EA60035C769 /* Drawable.swift */; };
 		A067C7342267B6E0008BEA8D /* PreviousState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A067C7332267B6E0008BEA8D /* PreviousState.swift */; };
+		A06EB1F12282160800142420 /* VectorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06EB1F02282160800142420 /* VectorDelegate.swift */; };
+		A06EB1F322821B2A00142420 /* VectorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06EB1F222821B2A00142420 /* VectorData.swift */; };
+		A06EB1F72282243D00142420 /* UpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06EB1F62282243D00142420 /* UpdateController.swift */; };
+		A06EB1F92282793A00142420 /* PlaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06EB1F82282793A00142420 /* PlaneView.swift */; };
+		A06EB1FB228279A700142420 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06EB1FA228279A700142420 /* DrawingView.swift */; };
+		A06EB1FD22827A7900142420 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06EB1FC22827A7900142420 /* Camera.swift */; };
 		A0F14B9C2224E81E009DC4D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F14B9B2224E81E009DC4D2 /* AppDelegate.swift */; };
 		A0F14B9E2224E81E009DC4D2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F14B9D2224E81E009DC4D2 /* MainViewController.swift */; };
 		A0F14BA12224E81E009DC4D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F14B9F2224E81E009DC4D2 /* Main.storyboard */; };
@@ -69,6 +75,12 @@
 		A061C2EB22584E920035C769 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		A061C2ED22584EA60035C769 /* Drawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
 		A067C7332267B6E0008BEA8D /* PreviousState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousState.swift; sourceTree = "<group>"; };
+		A06EB1F02282160800142420 /* VectorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorDelegate.swift; sourceTree = "<group>"; };
+		A06EB1F222821B2A00142420 /* VectorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorData.swift; sourceTree = "<group>"; };
+		A06EB1F62282243D00142420 /* UpdateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateController.swift; sourceTree = "<group>"; };
+		A06EB1F82282793A00142420 /* PlaneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneView.swift; sourceTree = "<group>"; };
+		A06EB1FA228279A700142420 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		A06EB1FC22827A7900142420 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		A0D7F49E39B720D1219A31AD /* Pods-Vortecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vortecs.release.xcconfig"; path = "Target Support Files/Pods-Vortecs/Pods-Vortecs.release.xcconfig"; sourceTree = "<group>"; };
 		A0F14B982224E81E009DC4D2 /* Vortecs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vortecs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F14B9B2224E81E009DC4D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +147,7 @@
 				A061C2EB22584E920035C769 /* Plane.swift */,
 				A018D690226B73AD002E6A80 /* TransformationController.swift */,
 				A018D696226B8B00002E6A80 /* MoveVC.swift */,
+				A06EB1F82282793A00142420 /* PlaneView.swift */,
 			);
 			path = Displaying;
 			sourceTree = "<group>";
@@ -145,6 +158,8 @@
 				A061C2E1225804580035C769 /* VectorSource.swift */,
 				A061C2E9225837370035C769 /* VectorUpdate.swift */,
 				A067C7332267B6E0008BEA8D /* PreviousState.swift */,
+				A06EB1F222821B2A00142420 /* VectorData.swift */,
+				A06EB1FC22827A7900142420 /* Camera.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -158,6 +173,9 @@
 				A018D692226B7563002E6A80 /* TransformationDelegate.swift */,
 				A0407A93226D1C70008ECC0C /* CoordinateDelegate.swift */,
 				A0407A95226D1E30008ECC0C /* HoldingView.swift */,
+				A06EB1F02282160800142420 /* VectorDelegate.swift */,
+				A06EB1F62282243D00142420 /* UpdateController.swift */,
+				A06EB1FA228279A700142420 /* DrawingView.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -416,15 +434,21 @@
 				A0F14BC52224F154009DC4D2 /* CartesianVector.swift in Sources */,
 				A0F14BC92224FB82009DC4D2 /* Vector.swift in Sources */,
 				A018D693226B7563002E6A80 /* TransformationDelegate.swift in Sources */,
+				A06EB1FD22827A7900142420 /* Camera.swift in Sources */,
 				A0407A94226D1C70008ECC0C /* CoordinateDelegate.swift in Sources */,
 				A061C2DF2258034F0035C769 /* InputController.swift in Sources */,
+				A06EB1FB228279A700142420 /* DrawingView.swift in Sources */,
 				A061C2E8225808900035C769 /* VectorCell.swift in Sources */,
+				A06EB1F92282793A00142420 /* PlaneView.swift in Sources */,
+				A06EB1F72282243D00142420 /* UpdateController.swift in Sources */,
 				A061C2E5225806280035C769 /* VectorInteractor.swift in Sources */,
 				A018D68F22694561002E6A80 /* UndoDelegate.swift in Sources */,
 				A061C2E2225804580035C769 /* VectorSource.swift in Sources */,
 				A061C2EC22584E920035C769 /* Plane.swift in Sources */,
 				A067C7342267B6E0008BEA8D /* PreviousState.swift in Sources */,
+				A06EB1F12282160800142420 /* VectorDelegate.swift in Sources */,
 				A0F14B9C2224E81E009DC4D2 /* AppDelegate.swift in Sources */,
+				A06EB1F322821B2A00142420 /* VectorData.swift in Sources */,
 				A061C2EE22584EA60035C769 /* Drawable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

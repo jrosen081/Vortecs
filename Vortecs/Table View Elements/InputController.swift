@@ -10,6 +10,7 @@ import UIKit
 
 class InputController: UITableViewController {
 	var source: VectorInteractor?
+	var controller: UpdateController?
 	weak var displayer: UIViewController?
 	
 	
@@ -18,51 +19,25 @@ class InputController: UITableViewController {
 		self.tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: self.tableView.rowHeight / 10, right: 0)
 		self.tableView.separatorStyle = .singleLine
 	}
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-		return 1
-    }
-
-	// Returns the number of rows/vectors
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return source?.totalVectors ?? 0
-    }
-
-	// Gets the scell from the data source
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		if let cell = tableView.dequeueReusableCell(withIdentifier: "VectorCell", for: indexPath) as? VectorCell{
-			if let vector = source?.vector(at: indexPath.row){
-				source?.updateCellValues(at: indexPath.row, cell: cell)
-				cell.xField.restorationIdentifier = "\(indexPath.row)"
-				cell.yField.restorationIdentifier = "\(indexPath.row)"
-				cell.angleField.restorationIdentifier = "\(indexPath.row)"
-				cell.lengthField.restorationIdentifier = "\(indexPath.row)"
-				cell.negateButton.restorationIdentifier = "\(indexPath.row)"
-				cell.negateButton.addTarget(self, action: #selector(negateVector(_:)), for: .touchUpInside)
-				cell.negateButton.backgroundColor = vector.color
-				cell.xField.delegate = self
-				cell.yField.delegate = self
-				cell.angleField.delegate = self
-				cell.lengthField.delegate = self
-				cell.border = (vector.color.cgColor, 1)
-        		return cell
-			}
+	
+	/// Update the specific cell
+	/// - Parameter idx: The index of the cell to update
+	func updateCell(at idx: Int) {
+		if let cell = self.tableView.cellForRow(at: IndexPath(item: idx, section: 0)) as? VectorCell {
+			self.controller?.updateCell(at: idx, cell: cell)
 		}
-		return UITableViewCell()
-    }
+	}
 	
 	// If the cell gets tapped
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let alert = UIAlertController(title: "Vector Actions", message: "What would you like to do to the vector?", preferredStyle: .alert)
 		let unitize = UIAlertAction(title: "Unitize", style: .default) { _ in
-			self.source?.updateVector(at: indexPath.row, with: .length(val: 1))
+			self.controller?.updateVector(at: indexPath.row, with: .length(val: 1))
 			tableView.deselectRow(at: indexPath, animated: false)
 			self.tableView.reloadRows(at: [indexPath], with: .none)
 		}
 		let normalize = UIAlertAction(title: "Normalize", style: .default) { _ in
-			self.source?.updateVector(at: indexPath.row, with: .normalize)
+			self.controller?.updateVector(at: indexPath.row, with: .normalize)
 			tableView.deselectRow(at: indexPath, animated: false)
 			self.tableView.reloadRows(at: [indexPath], with: .none)
 		}
@@ -106,15 +81,6 @@ class InputController: UITableViewController {
 		return max(size, 175)
 	}
 	
-	
-	// Negates the vector that relates to the given button
-	@objc func negateVector(_ sender: UIButton) {
-		if let id = sender.restorationIdentifier, let index = Int(id) {
-			self.source?.updateVector(at: index, with: .negate)
-			self.tableView.reloadRows(at: [IndexPath(item: index, section: 0)], with: .none)
-		}
-	}
-	
 	// Ends the text editing
 	@objc func endEditing() {
 		for cell in self.tableView.visibleCells where cell is VectorCell {
@@ -130,7 +96,7 @@ class InputController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-			self.source?.removeVector(at: indexPath.row)
+			self.controller?.removeVector(at: indexPath.row)
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
 			if let cells = tableView.visibleCells as? [VectorCell] {
@@ -157,16 +123,16 @@ extension InputController: UITextFieldDelegate {
 	func textFieldDidEndEditing(_ textField: UITextField) {
 		if let id = textField.restorationIdentifier, let num = Int(id), let type = textField.accessibilityIdentifier, let value = CGFloat.convert(str: textField.text!) {
 			if type == "x" {
-				self.source?.updateVector(at: num, with: .x(val: Decimal(value)))
+				self.controller?.updateVector(at: num, with: .x(val: Decimal(value)))
 			} else if type == "angle" {
-				self.source?.updateVector(at: num, with: .angle(val: Decimal(value)))
+				self.controller?.updateVector(at: num, with: .angle(val: Decimal(value)))
 			} else if type == "length" {
-				self.source?.updateVector(at: num, with: .length(val: Decimal(value)))
+				self.controller?.updateVector(at: num, with: .length(val: Decimal(value)))
 			} else if type == "y" {
-				self.source?.updateVector(at: num, with: .y(val: Decimal(value)))
+				self.controller?.updateVector(at: num, with: .y(val: Decimal(value)))
 			}
 			if let cell = self.tableView.cellForRow(at: IndexPath(item: num, section: 0)) as? VectorCell{
-				self.source?.updateCellValues(at: num, cell: cell)
+				self.controller?.updateCell(at: num, cell: cell)
 			}
 		}
 	}
@@ -187,7 +153,6 @@ extension InputController: TransformationDelegate {
 			count += 1
 			self.source?.partialTransform(with: (.identity - (difference * count)).invertY)
 			self.tableView.reloadData()
-			
 		}
 	}
 }
