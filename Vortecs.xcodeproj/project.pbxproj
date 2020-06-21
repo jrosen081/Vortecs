@@ -339,16 +339,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Vortecs/Pods-Vortecs-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MathParser/MathParser.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Vortecs/Pods-Vortecs-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MathParser.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Vortecs/Pods-Vortecs-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

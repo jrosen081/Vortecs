@@ -5,7 +5,7 @@ DEPENDENCIES:
   - MathParser
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - MathParser
 
 SPEC CHECKSUMS:
@@ -13,4 +13,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: ccba2f96a4f56318c3d5787ae0484882bc376dc9
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.4
