@@ -25,7 +25,7 @@ protocol Vector {
 	
 	/**
 	 * Updates the value to be the opposite of the vector
-	* - returns: The vector that is opposite
+	 * - returns: The vector that is opposite
 	 */
 	func negate() -> Vector
 	

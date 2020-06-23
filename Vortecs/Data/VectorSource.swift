@@ -81,7 +81,7 @@ class VectorSource: NSObject, VectorInteractor {
 	// Updates the vector at the index with an update
 	// EFFECT: Updates the vector
 	func updateVector(at index: Int, with update: Update) {
-		if index < self.vectors.count {
+		if index < self.vectors.count, self.inBetween == .identity {
 			self.previous.append(PreviousState(vectors: self.vectors, transformation: self.transform))
 			self.vectors[index] = self.vector(at: index).update(with: update)
 			let path = self.vector(at: index).path()

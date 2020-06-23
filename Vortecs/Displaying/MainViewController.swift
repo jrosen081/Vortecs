@@ -29,6 +29,7 @@ class MainViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		dataSource  = VectorSource(undoManager: self, fixManager: self)
+		plane = Plane(frame: self.planeHolder.bounds.doubled)
 		if let view = storyboard?.instantiateViewController(withIdentifier: "TableView") as? InputController {
 			self.tableView = view
 			tableView.source = self.dataSource

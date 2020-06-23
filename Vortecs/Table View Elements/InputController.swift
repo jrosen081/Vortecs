@@ -175,6 +175,7 @@ extension InputController: UITextFieldDelegate {
 extension InputController: TransformationDelegate {
 	// Perform a transformation
 	func perform(transform: CGAffineTransform) {
+		self.endEditing()
 		var count: CGFloat = 0
 		let difference = (.identity - transform) / 50
 		Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) {timer in

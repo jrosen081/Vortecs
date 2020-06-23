@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -58,6 +58,7 @@
 		A018D696226B8B00002E6A80 /* MoveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveVC.swift; sourceTree = "<group>"; };
 		A0298D0C22726B36000C5BBE /* VectorSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorSourceTest.swift; sourceTree = "<group>"; };
 		A0298D16227A5683000C5BBE /* VectorTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorTester.swift; sourceTree = "<group>"; };
+		A031E4B224A193680030D08F /* Vortecs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Vortecs.entitlements; sourceTree = "<group>"; };
 		A0407A93226D1C70008ECC0C /* CoordinateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateDelegate.swift; sourceTree = "<group>"; };
 		A0407A95226D1E30008ECC0C /* HoldingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingView.swift; sourceTree = "<group>"; };
 		A0407A9B226EBD9F008ECC0C /* CGFloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
@@ -194,6 +195,7 @@
 		A0F14B9A2224E81E009DC4D2 /* Vortecs */ = {
 			isa = PBXGroup;
 			children = (
+				A031E4B224A193680030D08F /* Vortecs.entitlements */,
 				A026BEDE225D018100DB32A9 /* Displaying */,
 				A061C2E6225808700035C769 /* Table View Elements */,
 				A061C2E3225805B70035C769 /* Delegates */,
@@ -587,15 +589,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = Vortecs/Vortecs.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = SCB9RTL9PP;
 				INFOPLIST_FILE = "$(SRCROOT)/Vortecs/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JackRosen.VectorDisplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -607,15 +613,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = Vortecs/Vortecs.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = SCB9RTL9PP;
 				INFOPLIST_FILE = "$(SRCROOT)/Vortecs/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JackRosen.VectorDisplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

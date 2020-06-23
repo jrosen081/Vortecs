@@ -31,4 +31,14 @@ class VectorTester: XCTestCase {
 		XCTAssertEqual(newVector.beginY, 0)
 		XCTAssertEqual(vector1.endY, 0)
 	}
+	
+	func testAffineTransform() {
+		let vector1 = CartesianVector.zero.update(with: .y(val: 1))
+		let newVector = vector1.transformed(with: CGAffineTransform(scaleX: 2, y: 2))
+		let newestVector = vector1.transformed(with: CGAffineTransform(scaleX: 2, y: 2))
+		XCTAssertEqual(newVector.beginX, 0)
+		XCTAssertEqual(newVector.beginY, 0)
+		XCTAssertEqual(newVector.length, 2)
+		XCTAssertEqual(newVector.endY, newestVector.endY)
+	}
 }
